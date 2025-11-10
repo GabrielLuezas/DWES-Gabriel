@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Generador de Secuencias</title>
+  </head>
+  <body>
+    <h1>Formulario de Parámetros</h1>
+    <form action="formularioPatron.php" method="post">
+      <label for="numerosAGenerar">Cantidad de números a generar:</label>
+      <input
+        type="number"
+        id="numerosAGenerar"
+        name="numerosAGenerar"
+        value="300"
+        required
+      /><br /><br />
+
+      <label for="numMin">Número mínimo:</label>
+      <input
+        type="number"
+        id="numMin"
+        name="numMin"
+        value="1"
+        required
+      /><br /><br />
+
+      <label for="numMax">Número máximo:</label>
+      <input
+        type="number"
+        id="numMax"
+        name="numMax"
+        value="9"
+        required
+      /><br /><br />
+
+      <label for="primeroNumeroSecuencia">Primer número de la secuencia:</label>
+      <input
+        type="number"
+        id="primeroNumeroSecuencia"
+        name="primeroNumeroSecuencia"
+        value="3"
+        required
+      /><br /><br />
+
+      <label for="segudoNumeroSecuencia">Segundo número de la secuencia:</label>
+      <input
+        type="number"
+        id="segudoNumeroSecuencia"
+        name="segudoNumeroSecuencia"
+        value="5"
+        required
+      /><br /><br />
+
+      <label for="tercerNumeroSecuencia">Tercer número de la secuencia:</label>
+      <input
+        type="number"
+        id="tercerNumeroSecuencia"
+        name="tercerNumeroSecuencia"
+        value="7"
+        required
+      /><br /><br />
+
+      <label for="formato">Formato:</label>
+      <select id="formato" name="formato" required>
+        <option value="primera">Primera</option>
+        <option value="ultima" selected>Última</option>
+        <option value="todas">Todas</option></select
+      ><br /><br />
+
+      <input type="submit" value="Generar y Buscar" />
+    </form>
+  </body>
+</html>

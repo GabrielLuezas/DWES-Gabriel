@@ -1,0 +1,73 @@
+<!--
+Conversor de temperaturas
+Crea un programa que convierta temperaturas entre Celsius, Fahrenheit y Kelvin usando
+funciones. Incluye una función principal que muestre una tabla con los resultados de conversión de
+una lista de valores
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conversor de Temperaturas</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 40px;
+        background-color: #f6f6f6;
+      }
+      h2 {
+        color: #333;
+      }
+      form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 320px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      label,
+      select,
+      input {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Conversor de Temperaturas</h2>
+
+    <form action="ejercicio3.php" method="post">
+      <label>Valor:</label>
+      <input type="number" step="any" name="valor" id="valor" required />
+
+      <label>Convertir de:</label>
+      <select name="origen" id="origen" required>
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+      </select>
+
+      <label>A:</label>
+      <select name="destino" id="destino" required>
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+      </select>
+
+      <input type="submit" value="Convertir" />
+    </form>
+  </body>
+</html>
