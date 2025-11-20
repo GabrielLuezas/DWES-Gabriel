@@ -1,31 +1,31 @@
 <?php
 require_once "Envio.php";
+require_once __DIR__ . "/../constantes.php";
 
 class EnvioEstandar extends Envio
 {
     public function calcularCoste()
-    {
-        $coste = $this->peso * 2.00;
-        return $this->aplicarExtras($coste);
+{
+    $coste = $this->getPeso() * COSTE_BASE_ESTANDAR;
+    return $this->aplicarExtras($coste);
+}
+
+private function aplicarExtras($coste)
+{
+    if ($this->getDestino() == "Internacional") {
+        switch ($this->getZona()) {
+            case 'A': $coste *= MULT_ZONA_A; break;
+            case 'B': $coste *= MULT_ZONA_B; break;
+            case 'C': $coste *= MULT_ZONA_C; break;
+        }
     }
 
-    
-    private function aplicarExtras($coste)
-    {
-        if ($this->destino == "Internacional") {
-            switch ($this->zona) {
-                case 'A': $coste *= 1.30; break;
-                case 'B': $coste *= 1.50; break;
-                case 'C': $coste *= 1.80; break;
-            }
-        }
-
-        if ($this->seguro) {
-            $coste *= 1.02;
-        }
-
-        return $coste;
+    if ($this->getSeguro()) {
+        $coste *= MULT_SEGURO;
     }
+
+    return $coste;
+}
+
 }
 ?>
- 

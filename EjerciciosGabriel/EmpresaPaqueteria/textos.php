@@ -1,4 +1,6 @@
 <?php
 const TXT_REMITENTE_Y_DESTINATARIO_SON_OBLIGATORIOS = "LOS TEXTOS DE DESTINATARIO Y REMITENTE SON OBLIGATORIO MAMAWEBASO";
 const TXT_ERROR_EN_LOS_DATOS_INTRODUCIDOS_INTENTALO_DE_NUEVO = "ERROR";
+const TXT_ERROR_CAMPOS_OBLIGATORIOS = "Por favor, completa los campos obligatorios: remitente, destinatario y peso.";
+const TXT_ERROR_TIPO_ENVIO = "Tipo de envío no válido.";
 ?>

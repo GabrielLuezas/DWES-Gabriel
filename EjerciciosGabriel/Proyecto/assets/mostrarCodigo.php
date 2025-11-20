@@ -28,7 +28,7 @@ ini_set('highlight.comment', '#75715e; font-style:italic');
 ini_set('highlight.default', '#f8f8f2');
 ini_set('highlight.keyword', '#66d9ef; font-weight:bold');
 ini_set('highlight.string', '#e6db74');
-ini_set('highlight.html', '#87fd38ff');
+ini_set('highlight.html', '#f92672');
 ini_set('highlight.identifier', '#fd971f');
 ini_set('highlight.bg', '#272822');
 

@@ -1,14 +1,15 @@
 <?php
 require_once "Envio.php";
+require_once __DIR__ . "/../constantes.php";
 
 class EnvioExpres extends Envio
 {
     public function calcularCoste()
     {
-        $coste = $this->getPeso() * 3.50;
+        $coste = $this->getPeso() * COSTE_BASE_EXPRES;
 
-        if ($this->getPeso() > 10) {
-            $coste += $this->getPeso() * 0.50;
+        if ($this->getPeso() > UMBRAL_PESO_EXPRES) {
+            $coste += $this->getPeso() * RECARGO_PESO_EXPRES;
         }
         
         return $this->aplicarExtras($coste);
@@ -19,18 +20,17 @@ class EnvioExpres extends Envio
     {
         if ($this->getDestino() == "Internacional") {
             switch ($this->getZona()) {
-                case 'A': $coste *= 1.30; break;
-                case 'B': $coste *= 1.50; break;
-                case 'C': $coste *= 1.80; break;
+                case 'A': $coste *= MULT_ZONA_A; break;
+                case 'B': $coste *= MULT_ZONA_B; break;
+                case 'C': $coste *= MULT_ZONA_C; break;
             }
         }
 
         if ($this->getSeguro()) {
-            $coste *= 1.02;
+            $coste *= MULT_SEGURO;
         }
 
         return $coste;
     }
 }
 ?>
- 
