@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Andoni",
+        "email": "apastraher@gmail.com",
+        "telefono": "638 90 82 81",
+        "password": "$2y$10$a9JSLc.NkswKP9LANAJ6fekE7\/l5YHo60\/TSsZdggSjosANREqr2u",
+        "role": "admin"
+    },
+    {
+        "nombre": "profesor mu malo",
+        "email": "dwesbecariosinsueldo@gmail.com",
+        "telefono": "638 92 92 91",
+        "password": "$2y$10$cBtgfQQpy4K6MZCbRyBfou4ULWSAgTODj8qki6dlYrciQ7VjhIl4a",
+        "role": "user"
+    }
+]

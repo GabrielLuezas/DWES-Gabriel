@@ -6,14 +6,12 @@ class EnvioFragil extends Envio
 {
     public function calcularCoste()
     {
-        // Calcula coste base
         $coste = ($this->peso * COSTE_BASE_FRAGIL) + COSTE_FIJO_FRAGIL;
         return $this->aplicarExtras($coste);
     }
 
     private function aplicarExtras($coste)
     {
-        // Ajuste por destino internacional
         if ($this->destino == "Internacional") {
             switch ($this->zona) {
                 case 'A': $coste *= MULT_ZONA_A; break;
@@ -22,7 +20,6 @@ class EnvioFragil extends Envio
             }
         }
 
-        // Ajuste por seguro
         if ($this->seguro) {
             $coste *= MULT_SEGURO;
         }
