@@ -2,12 +2,12 @@
 
 abstract class Envio
 {
-    private $remitente;
-    private $destinatario;
-    private $peso;
-    private $destino;
-    private $zona;
-    private $seguro;
+    protected $remitente;
+    protected $destinatario;
+    protected $peso;
+    protected $destino;
+    protected $zona;
+    protected $seguro;
 
 
     public function __construct($remitente, $destinatario, $peso, $destino, $zona, $seguro) {
