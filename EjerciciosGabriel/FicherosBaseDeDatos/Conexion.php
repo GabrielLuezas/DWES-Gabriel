@@ -4,12 +4,13 @@ class CConexion {
 
     function ConexionBD() {
 
-        $connString = "pgsql:host=ep-holy-glade-abymyepe-pooler.eu-west-2.aws.neon.tech;
-                       dbname=neondb;
-                       sslmode=require";
+        $connString = "pgsql:host=ep-steep-shadow-ag3gkbv3-pooler.c-2.eu-central-1.aws.neon.tech;
+                       dbname=spotify;
+                       sslmode=require;
+                       channel_binding=require";
 
         $username = "neondb_owner";
-        $password = "npg_U7SXuJqbMe1F";
+        $password = "npg_GeK4OE9XcSDQ";
 
         try {
             $conn = new PDO($connString, $username, $password, [
@@ -26,10 +27,6 @@ class CConexion {
         return $conn;
     }
 
-    
 }
-
-
-
 
 ?>

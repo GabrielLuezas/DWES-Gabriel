@@ -1,3 +1,0 @@
-Un logging con formulario de registro. Guardamos en un archivo el email, nombre, telefono y contraseña
-
-Enviamos un email de confirmacion de registro, cuando cada usuario, puede ver sus datos, el administrador el de todos
